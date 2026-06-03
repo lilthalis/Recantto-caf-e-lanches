@@ -1,110 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recantto café e lanches</title>
 
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Recantto café |Sabor que reúne momentos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
+    <!-- NAVBAR -->
 
-<nav class="navbar">
+    <header>
 
-<div class="logo">
-RECANTO CAFÉ E LANCHES
-</div>
+        <nav class="navbar">
 
-<ul>
-<li><a href="#inicio">Início</a></li>
-<li><a href="#cardapio">Cardápio</a></li>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
+            <div class="logo">
 
-</nav>
+                <span class="logo-icon">🍔</span>
 
-</header>
+                <div>
 
-<section class="hero" id="inicio">
+                    <h2>RECANTTO CAFÉ</h2>
+                    <p>Lanches</p>
 
-<div class="overlay"></div>
+                </div>
 
-<div class="hero-content">
+            </div>
 
-<h1>Recanto Lanches</h1>
+            <ul class="nav-links">
 
-<p>
-Sabor artesanal, ingredientes selecionados
-e momentos inesquecíveis.
-</p>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
 
-<a href="#cardapio" class="btn">
-Ver Cardápio
-</a>
+            </ul>
 
-</div>
+            <a href="#" class="pedido-btn">
+                Faça seu Pedido
+            </a>
 
-</section>
+        </nav>
 
-<section class="menu" id="cardapio">
+    </header>
 
-<h2>Nosso Cardápio</h2>
+    <!-- HERO -->
 
-<div class="cards">
+    <section id="inicio" class="hero">
 
-<div class="card">
-<h3>🍔 Lanches</h3>
-<p>X-Bacon</p>
-<p>X-Salada</p>
-<p>X-Tudo</p>
-</div>
+        <div class="hero-overlay"></div>
 
-<div class="card">
-<h3>🥤 Bebidas</h3>
-<p>Coca-Cola</p>
-<p>Guaraná</p>
-<p>Suco Natural</p>
-</div>
+        <div class="hero-content">
 
-<div class="card">
-<h3>🍽️ Pratos</h3>
-<p>Bife Acebolado</p>
-<p>Prato Executivo</p>
-<p>Especial da Casa</p>
-</div>
+            <div class="hero-text">
 
-</div>
+                <span class="hero-mini">
+                    Sabor que reúne
+                </span>
 
-</section>
+                <h1>
+                    FAMÍLIA,
+                    AMIGOS E
+                    MOMENTOS
+                    ESPECIAIS
+                </h1>
 
-<section class="sobre" id="sobre">
+                <p>
 
-<h2>Sobre Nós</h2>
+                    Lanches artesanais,
+                    pratos deliciosos e bebidas
+                    para todos os momentos.
 
-<p>
-O Recanto oferece refeições e lanches preparados
-com qualidade, carinho e ingredientes frescos.
-</p>
+                </p>
 
-</section>
+                <div class="hero-buttons">
 
-<section class="contato" id="contato">
+                    <a href="#cardapio" class="btn-primary">
 
-<h2>Contato</h2>
+                        Ver Cardápio
 
-<p>WhatsApp: (63) 99999-9999</p>
+                    </a>
 
-<p>Instagram: @recantolanches</p>
+                    <a href="#" class="btn-secondary">
 
-</section>
+                        WhatsApp
 
-<script src="script.js"></script>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="img/hero-burger.png" alt="Hambúrguer">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CARDÁPIO -->
+
+    <section id="cardapio" class="menu-section">
+
+        <div class="section-title">
+
+            <span>O melhor para você</span>
+
+            <h2>
+                NOSSO CARDÁPIO
+            </h2>
+
+        </div>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+
+                <img src="img/lanche.jpg" alt="Lanches">
+
+                <div class="menu-info">
+
+                    <h3>🍔 Lanches</h3>
+
+                    <p>
+
+                        Hambúrgueres artesanais preparados
+                        com ingredientes selecionados.
+
+                    </p>
+
+                    <a href="#">
+                        Ver Lanches
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card">
+
+                <img src="img/bebidas.jpg" alt="Bebidas">
+
+                <div class="menu-info">
+
+                    <h3>🥤 Bebidas</h3>
+
+                    <p>
+
+                        Refrigerantes,
+                        sucos e opções especiais.
+
+                    </p>
+
+                    <a href="#">
+                        Ver Bebidas
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card">
+
+                <img src="img/pratos.jpg" alt="Pratos">
+
+                <div class="menu-info">
+
+                    <h3>🍽️ Pratos Executivos</h3>
+
+                    <p>
+
+                        Refeições completas para almoço,
+                        jantar ou qualquer horário.
+
+                    </p>
+
+                    <a href="#">
+                        Ver Pratos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+
+    <section id="sobre" class="about">
+
+        <div class="about-image">
+
+            <img src="img/restaurante.jpg" alt="Recanto">
+
+        </div>
+
+        <div class="about-content">
+
+            <span>Quem Somos</span>
+
+            <h2>
+                SOBRE NÓS
+            </h2>
+
+            <p>
+
+                O Recantto café e lanches nasceu com o propósito de oferecer
+                mais do que refeições.
+
+                Aqui, cada lanche é preparado com carinho,
+                ingredientes frescos e aquele sabor que
+                lembra casa, família e bons momentos.
+
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <span>⭐</span>
+
+                    <h4>
+                        Ingredientes
+                        Selecionados
+                    </h4>
+
+                </div>
+
+                <div class="feature">
+
+                    <span>❤️</span>
+
+                    <h4>
+                        Feito com
+                        Carinho
+                    </h4>
+
+                </div>
+
+                <div class="feature">
+
+                    <span>🏠</span>
+
+                    <h4>
+                        Ambiente
+                        Familiar
+                    </h4>
+
+                </div>
+
+                <div class="feature">
+
+                    <span>🏆</span>
+
+                    <h4>
+                        Qualidade
+                        Garantida
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria">
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+    </section>
+
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
+```
