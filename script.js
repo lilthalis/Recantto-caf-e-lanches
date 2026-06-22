@@ -1,56 +1,43 @@
-// Navbar muda ao rolar
+const navbar = document.querySelector('.navbar');
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+const phoneNumber = '5500000000000';
 
-window.addEventListener("scroll", () => {
+function buildWhatsappUrl(product = '') {
+    const message = `Olá!\n\nGostaria de fazer um pedido.\n\nNome:\nProduto:${product ? ` ${product}` : ''}\nObservações:`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+}
 
-    const navbar =
-    document.querySelector(".navbar");
-
-    if(window.scrollY > 100){
-
-        navbar.style.background =
-        "rgba(0,0,0,.95)";
-
-    }else{
-
-        navbar.style.background =
-        "rgba(0,0,0,.7)";
-    }
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 80);
 });
 
-// Scroll Reveal simples
+toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+});
 
-const cards =
-document.querySelectorAll(
-".menu-card, .feature"
-);
-
-const observer =
-new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-            entry.target.style.opacity = "1";
-
-            entry.target.style.transform =
-            "translateY(0)";
-        }
-
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
     });
-
 });
 
-cards.forEach(card => {
-
-    card.style.opacity = "0";
-
-    card.style.transform =
-    "translateY(40px)";
-
-    card.style.transition =
-    ".8s ease";
-
-    observer.observe(card);
-
+whatsappLinks.forEach(link => {
+    link.href = buildWhatsappUrl(link.dataset.product || '');
+    link.target = '_blank';
+    link.rel = 'noreferrer';
 });
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.14 });
+
+document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
