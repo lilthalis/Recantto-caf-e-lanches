@@ -1,298 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Recantto café |Sabor que reúne momentos</title>
-
+    <title>Recantto Café & Lanches | Sabores que viram memórias</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- NAVBAR -->
-
-    <header>
-
+    <header class="site-header">
         <nav class="navbar">
-
-            <div class="logo">
-
-                <span class="logo-icon">🍔</span>
-
+            <a href="#inicio" class="logo" aria-label="Recantto Café & Lanches">
+                <span class="logo-mark">R</span>
                 <div>
-
-                    <h2>RECANTTO CAFÉ</h2>
-                    <p> e Lanches</p>
-
+                    <strong>RECANTTO</strong>
+                    <small>Café & Lanches</small>
                 </div>
-
-            </div>
-
-            <ul class="nav-links">
-
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
-
-            </ul>
-
-            <a href="#" class="pedido-btn">
-                Faça seu Pedido
             </a>
 
-        </nav>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#historia">Nossa História</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <a class="pedido-btn whatsapp-link" href="#">Pedir no WhatsApp</a>
+        </nav>
     </header>
 
-    <!-- HERO -->
+    <main>
+        <section id="inicio" class="hero cinematic-section">
+            <div class="hero-media" aria-hidden="true">
+                <div class="video-card grill"><span>Lanches saindo da chapa</span></div>
+                <div class="video-card coffee"><span>Café sendo servido</span></div>
+                <div class="video-card people"><span>Momentos no Recantto</span></div>
+            </div>
+            <div class="hero-overlay"></div>
 
-    <section id="inicio" class="hero">
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-
-            <div class="hero-text">
-
-                <span class="hero-mini">
-                    Sabor que reúne
-                </span>
-
-                <h1>
-                    FAMÍLIA,
-                    AMIGOS E
-                    MOMENTOS
-                    ESPECIAIS
-                </h1>
-
-                <p>
-
-                    Lanches artesanais,
-                    pratos deliciosos e bebidas
-                    para todos os momentos.
-
-                </p>
-
+            <div class="hero-content reveal">
+                <span class="eyebrow">Cafeteria premium • lanches artesanais</span>
+                <h1>RECANTTO CAFÉ & LANCHES</h1>
+                <p>Sabores que transformam momentos simples em memórias.</p>
                 <div class="hero-buttons">
-
-                    <a href="#cardapio" class="btn-primary">
-
-                        Ver Cardápio
-
-                    </a>
-
-                    <a href="#" class="btn-secondary">
-
-                        WhatsApp
-
-                    </a>
-
+                    <a href="#cardapio" class="btn btn-primary">Ver Cardápio</a>
+                    <a href="#" class="btn btn-secondary whatsapp-link">Pedir no WhatsApp</a>
                 </div>
+            </div>
+        </section>
 
+        <section id="cardapio" class="menu-section section-pad">
+            <div class="section-title reveal">
+                <span>Cardápio visual</span>
+                <h2>Escolhas especiais da casa</h2>
+                <p>Fotos grandes, descrições rápidas e pedido direto para o WhatsApp.</p>
             </div>
 
-            <div class="hero-image">
+            <div class="menu-grid">
+                <article class="menu-card reveal">
+                    <div class="menu-photo cappuccino"></div>
+                    <div class="menu-info">
+                        <div>
+                            <h3>☕ Capuccino Especial</h3>
+                            <p>Cremoso, aromático e finalizado com toque de canela.</p>
+                        </div>
+                        <strong>R$ 12,90</strong>
+                        <a class="whatsapp-link" data-product="Capuccino Especial" href="#">Pedir agora</a>
+                    </div>
+                </article>
 
-                <img src="img/hero-burger.png" alt="Hambúrguer">
+                <article class="menu-card reveal">
+                    <div class="menu-photo burger"></div>
+                    <div class="menu-info">
+                        <div>
+                            <h3>🍔 Burger Recantto</h3>
+                            <p>Pão macio, carne suculenta, queijo derretido e molho da casa.</p>
+                        </div>
+                        <strong>R$ 24,90</strong>
+                        <a class="whatsapp-link" data-product="Burger Recantto" href="#">Pedir agora</a>
+                    </div>
+                </article>
 
+                <article class="menu-card reveal">
+                    <div class="menu-photo plate"></div>
+                    <div class="menu-info">
+                        <div>
+                            <h3>🍽️ Prato Executivo</h3>
+                            <p>Refeição completa, bem servida e preparada com carinho.</p>
+                        </div>
+                        <strong>R$ 29,90</strong>
+                        <a class="whatsapp-link" data-product="Prato Executivo" href="#">Pedir agora</a>
+                    </div>
+                </article>
             </div>
+        </section>
 
+        <section id="historia" class="story section-pad">
+            <div class="story-card reveal">
+                <span class="eyebrow">Nossa História</span>
+                <h2>Uma pausa especial no seu dia</h2>
+                <p>O Recantto nasceu com a missão de oferecer café de qualidade e lanches preparados com carinho para quem busca uma pausa especial durante o dia.</p>
+                <p>Entre aromas, sabores e atendimento acolhedor, criamos um ambiente para reunir família, amigos e boas conversas.</p>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery section-pad">
+            <div class="section-title reveal">
+                <span>Instagram style</span>
+                <h2>Galeria Recantto</h2>
+            </div>
+            <div class="gallery-grid">
+                <figure class="gallery-item coffee-shot reveal"><figcaption>Cafés</figcaption></figure>
+                <figure class="gallery-item snack-shot reveal"><figcaption>Lanches</figcaption></figure>
+                <figure class="gallery-item ambient-shot reveal"><figcaption>Ambiente</figcaption></figure>
+                <figure class="gallery-item client-shot reveal"><figcaption>Clientes</figcaption></figure>
+            </div>
+        </section>
+
+        <section id="avaliacoes" class="reviews section-pad">
+            <div class="section-title reveal">
+                <span>Confiança de quem visita</span>
+                <h2>Avaliações</h2>
+            </div>
+            <div class="review-grid">
+                <blockquote class="review-card reveal"><span>⭐⭐⭐⭐⭐</span><p>“Melhor café da cidade.”</p></blockquote>
+                <blockquote class="review-card reveal"><span>⭐⭐⭐⭐⭐</span><p>“Atendimento excelente.”</p></blockquote>
+                <blockquote class="review-card reveal"><span>⭐⭐⭐⭐⭐</span><p>“Os lanches são incríveis.”</p></blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="footer">
+        <div>
+            <h2>RECANTTO CAFÉ & LANCHES</h2>
+            <p>Preto café, espresso, creme e dourado em uma experiência premium.</p>
         </div>
-
-    </section>
-
-    <!-- CARDÁPIO -->
-
-    <section id="cardapio" class="menu-section">
-
-        <div class="section-title">
-
-            <span>O melhor para você</span>
-
-            <h2>
-                NOSSO CARDÁPIO
-            </h2>
-
+        <div>
+            <h3>Horário</h3>
+            <p>Segunda a sábado<br>08h às 22h</p>
         </div>
-
-        <div class="menu-grid">
-
-            <div class="menu-card">
-
-                <img src="img/lanche.jpg" alt="Lanches">
-
-                <div class="menu-info">
-
-                    <h3>🍔 Lanches</h3>
-
-                    <p>
-
-                        Hambúrgueres artesanais preparados
-                        com ingredientes selecionados.
-
-                    </p>
-
-                    <a href="#">
-                        Ver Lanches
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="menu-card">
-
-                <img src="img/bebidas.jpg" alt="Bebidas">
-
-                <div class="menu-info">
-
-                    <h3>🥤 Bebidas</h3>
-
-                    <p>
-
-                        Refrigerantes,
-                        sucos e opções especiais.
-
-                    </p>
-
-                    <a href="#">
-                        Ver Bebidas
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="menu-card">
-
-                <img src="img/pratos.jpg" alt="Pratos">
-
-                <div class="menu-info">
-
-                    <h3>🍽️ Pratos Executivos</h3>
-
-                    <p>
-
-                        Refeições completas para almoço,
-                        jantar ou qualquer horário.
-
-                    </p>
-
-                    <a href="#">
-                        Ver Pratos
-                    </a>
-
-                </div>
-
-            </div>
-
+        <div>
+            <h3>Contato</h3>
+            <a class="whatsapp-link" href="#">WhatsApp</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.google.com/maps" target="_blank" rel="noreferrer">Mapa</a>
         </div>
-
-    </section>
-
-    <!-- SOBRE -->
-
-    <section id="sobre" class="about">
-
-        <div class="about-image">
-
-            <img src="img/restaurante.jpg" alt="Recanto">
-
-        </div>
-
-        <div class="about-content">
-
-            <span>Quem Somos</span>
-
-            <h2>
-                SOBRE NÓS
-            </h2>
-
-            <p>
-
-                O Recantto café e lanches nasceu com o propósito de oferecer
-                mais do que refeições.
-
-                Aqui, cada lanche é preparado com carinho,
-                ingredientes frescos e aquele sabor que
-                lembra casa, família e bons momentos.
-
-            </p>
-
-            <div class="features">
-
-                <div class="feature">
-
-                    <span>⭐</span>
-
-                    <h4>
-                        Ingredientes
-                        Selecionados
-                    </h4>
-
-                </div>
-
-                <div class="feature">
-
-                    <span>❤️</span>
-
-                    <h4>
-                        Feito com
-                        Carinho
-                    </h4>
-
-                </div>
-
-                <div class="feature">
-
-                    <span>🏠</span>
-
-                    <h4>
-                        Ambiente
-                        Familiar
-                    </h4>
-
-                </div>
-
-                <div class="feature">
-
-                    <span>🏆</span>
-
-                    <h4>
-                        Qualidade
-                        Garantida
-                    </h4>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- GALERIA -->
-    <section id="galeria">
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato">
-    </section>
+        <a class="whatsapp-float whatsapp-link" href="#" aria-label="Pedir pelo WhatsApp">☘</a>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
-```
